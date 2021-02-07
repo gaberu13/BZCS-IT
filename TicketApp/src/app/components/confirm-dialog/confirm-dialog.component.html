@@ -1,0 +1,13 @@
+<div class="modal-header text-center">
+    <h4 class="modal-title w-100">
+       Потврди биршање</h4>
+    <button type="button" class="close" aria-label="Close" (click)="dismiss()">
+        <span>X</span></button>
+</div>
+<div class="modal-body text-center">
+    {{message}}
+</div>
+<div class="modal-footer justify-content-center">
+<button class="btn" (click)="decline()">Назад</button>
+<button class="btn btn-main" (click)="accept()">Потврди</button>
+</div>

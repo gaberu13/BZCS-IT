@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-12 m-5">
+        <h4>Инфорамции</h4>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-8 mb-5">
+        <label>Е-маил</label>
+        <input type="text" placeholder="Email" class="form-control" [(ngModel)]="model.email"/>
+        <label>Адреса</label>
+        <input type="text" placeholder="Address" class="form-control" [(ngModel)]="model.address"/>
+        <label>Телефонски бој</label>
+        <input type="text" placeholder="Phone" class="form-control" [(ngModel)]="model.phone"/>
+        <p class="error-message" *ngIf="error">{{error.form}}</p>
+        <div class="text-center mt-5">
+            <button class="btn btn-main" (click)="update()">Прифати</button>
+            <button class="btn" (click)="cancel()">Назад</button>
+        </div>
+    </div>
+</div>

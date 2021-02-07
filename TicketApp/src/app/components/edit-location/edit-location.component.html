@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-12 m-5">
+        <h4>Локација</h4>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-8 mb-5">
+        <label>Име</label>
+        <input type="text" placeholder="Name" class="form-control" [(ngModel)]="location.name"/>
+           <p class="error-message" *ngIf="error">{{error.name}}</p>
+        <label>Опис</label>
+        <input type="text" placeholder="Description" class="form-control" [(ngModel)]="location.description"/>
+           <p class="error-message" *ngIf="error">{{error.description}}</p>
+        <label>Капацитет</label>
+        <input type="number" placeholder="Capacity" class="form-control" [(ngModel)]="location.capacity"/>
+           <p class="error-message" *ngIf="error">{{error.capacity}}</p>
+        <p class="error-message" *ngIf="error">{{error.form}}</p>
+        <div class="text-center mt-5">
+            <button class="btn btn-main" (click)="add()">Потврди</button>
+            <button class="btn" (click)="cancel()">Назад</button>
+        </div>
+    </div>
+</div>

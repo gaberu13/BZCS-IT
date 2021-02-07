@@ -1,0 +1,29 @@
+<div style="position:relative">
+    <div class="wall">
+        <h4 class="header-title">Локации</h4>
+    </div>
+    <div class="triangle-bottomright"></div>
+    <div [appUserType]="['admin']" class="edit">
+        <button class="btn btn-main" (click)="open()">Додади локација</button>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center m-5 boxed" *ngFor="let location of locations">
+
+            <div class="col-md-6 text-center p-0">
+                <img class="img-size" [src]="images[locations.indexOf(location)]" alt="fail to load image">
+            </div>
+
+            <div class="col-md-6 p-0 bg-color">
+                <div class="m-5">
+                    <h5 class="mx-5">{{location.name}}</h5>
+                    <label>{{location.description}}</label>
+                    <p>Капацитет: {{location.capacity}}</p>
+                    <div [appUserType]="['admin']" class="edit">
+                        <button class="btn btn-main" (click)="open(location)">Измени</button>
+                        <button class="btn" (click)="delete(location.id)">Избриши</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
