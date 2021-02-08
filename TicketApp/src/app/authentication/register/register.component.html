@@ -3,27 +3,27 @@
     <div class="col-6 py-5">
       <div class="text-center my-5">
         <img src="/assets/logo3.png">
-        <h3 class="color-title">Register</h3>
+        <h3 class="color-title">Регистрација</h3>
       </div>
-      <label>Email</label>
+      <label>Е-маил</label>
       <input type="text" placeholder="Email" class="form-control" [(ngModel)]="model.email"/>
       <p class="error-message" *ngIf="error">{{error.email}}</p>
-      <label>Username</label>
+      <label>Корисничко име</label>
       <input type="text" placeholder="Username" class="form-control" [(ngModel)]="model.username"/>
       <p class="error-message" *ngIf="error">{{error.username}}</p>
-      <label>Password</label>
+      <label>Лозинка</label>
       <input type="password" placeholder="Password" class="form-control" [(ngModel)]="model.password"/>
       <p class="error-message" *ngIf="error">{{error.password}}</p>
-      <label>Address</label>
+      <label>Адреса</label>
       <input type="text" placeholder="Address" class="form-control" [(ngModel)]="model.address"/>
       <p class="error-message" *ngIf="error">{{error.address}}</p>
-      <label>Phone</label>
+      <label>Телефонски број</label>
       <input type="text" placeholder="Phone" class="form-control" [(ngModel)]="model.phone"/>
       <p class="error-message" *ngIf="error">{{error.phone}}</p>
       <div class="text-center my-5">
         <p class="error-message" *ngIf="error.form">{{error.form}}</p>
-        <button class="btn btn-main " (click)="register()">Register</button>
-        <button class="btn " [routerLink]="['login']">Login</button>
+        <button class="btn btn-main " (click)="register()">Регистрирај се</button>
+        <button class="btn " [routerLink]="['login']">Најава</button>
       </div>
 
     </div>
